@@ -1,7 +1,7 @@
 # Tomasulo Algorithm Demo
 
 ### A program to simulate tomasulo algorithm in computer organization
-  
+
 ```
  ════════════════════════════════════════════════════════ 
 CYCLE : 27
@@ -35,6 +35,7 @@ CYCLE : 27
 
  ════════════════════════════════════════════════════════ 
  ```
+`If have render issue, github is recommended.`
 
  ## Build
  Tested Environment : Ubuntu 20.04.2 LTS  
@@ -92,7 +93,7 @@ Instruction will not be dispatch if not ready or have other instruction in buffe
 Represent what instruction in the buffer.  
 Will be empty if not run any instruction.  
 
-###　Remainder for RS Buffer
+### Remainder for RS Buffer
 ```
   Remain Cycle : 0                        Remain Cycle : 8   
 ```
