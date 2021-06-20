@@ -72,7 +72,7 @@ As Register File in current cycle
 Register Alias Table.  
 Will be empty if don't have reference.
 
-## Reservation Station
+### Reservation Station
 ```
 
       ┌───────┬───────┬───────┐               ┌───────┬───────┬───────┐
