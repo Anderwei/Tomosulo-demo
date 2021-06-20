@@ -19,7 +19,7 @@ public:
     }
 
     void show(){
-        cout<<"      ┌──RS──┐"<<endl;
+        cout<<"      ┌──RF──┐"<<endl;
         for(int i = 0 ; i < table.size();i++){
             cout<<"  F"<<i + 1<<"  │"<<setw(5)<<table[i]<<" │"<<endl;
         }
@@ -217,6 +217,7 @@ public:
         for(int i = 0 ; i < mul_div_queue.size();i++){
             is_empty &= mul_div_queue[i].name == "";
         }
+        return is_empty;
     }
 
     void issue_preprocess(Instruction& inst){
@@ -367,8 +368,10 @@ int main(int argc, char* argv[]){
 
     Reservation_station RS;
 
-    while(!inst_queue.empty() || !RS.is_empty()){
+    int cycle_count = 1;
 
+    while(!inst_queue.empty() || !RS.is_empty()){
+        cout<<"CYCLE : "<<cycle_count++<<endl;
         RS.process_and_broadcast();
 
         if(!inst_queue.empty()){
