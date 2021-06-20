@@ -38,11 +38,11 @@ CYCLE : 27
 `If have render issue, github is recommended.`
 
  ## Build
- Tested Environment : Ubuntu 20.04.2 LTS  
+ Tested in Ubuntu 20.04.2 LTS with data file "input"  
  `g++ main.cpp -o main -std=c++14`
 
 ## Run
-simple use `./main [input file name]` to run the program
+Simple use `./main [input file name]` to run the program
 
 ## Output
 
@@ -57,7 +57,7 @@ simple use `./main [input file name]` to run the program
   F5  │    8 │
       └──────┘
 ```
-As Register File in current cycle
+As Register File status in current cycle
 
 ### Register Alias Table
 ```
@@ -70,7 +70,7 @@ As Register File in current cycle
       └──────┘
 ```
 Register Alias Table.  
-Will be empty if don't have reference.
+Will be empty if don't have renaming.
 
 ### Reservation Station
 ```
@@ -91,7 +91,7 @@ Instruction will not be dispatch if not ready or have other instruction in buffe
       └───────┴───────┴───────┘               └───────┴───────┴───────┘
 ```
 Represent what instruction in the buffer.  
-Will be empty if not run any instruction.  
+Will be blank if none of instruction is ready of RS is empty.  
 
 ### Remainder for RS Buffer
 ```
@@ -99,4 +99,4 @@ Will be empty if not run any instruction.
 ```
 Show how many cycle instruction need.  
 Instruction will broadcast if count down to 0.  
-showing NaN if not instruction in buffer.  
+Showing NaN if not instruction in buffer.  
